@@ -1,0 +1,3 @@
+# ignore packages
+node_modules*
+build*

@@ -1,0 +1,66 @@
+
+{{#section 'head'}}
+    <title>个人中心</title>
+    <link rel="stylesheet" type="text/css" href="css/usercentertpl.css">
+{{/section}}
+    
+   <!-- <section class="background-layout"></section> -->
+
+   {{#with pageOwner}}
+    <header class="user-infor">
+        {{#if avatar}}
+        <img class="user-avatar" src="{{avatar}}" alt="{{name}}"/>
+        {{/if}}
+        {{#unless avatar}}
+        <img class="user-avatar" src="http://event.tujiaapp.com/images/user-iconser.jpg" alt="{{name}}"/>
+        {{/unless}}
+        <section class="user-describe">
+            <h1 class="user-name text-overflow-hidden">{{name}}</h1>
+            <p class="user-count">
+                <span>关注{{followingCount}}</span>
+                <span class="line">|</span>
+                <span>粉丝{{followerCount}}</span>
+                <span class="line">|</span>
+                <span>图文{{../twcount}}</span>
+            </p>
+            <p class="signature line-clamp">{{signature}}</p>
+        </section>
+    </header>
+    {{/with}}
+
+    
+    <ul class="wapper-tuwen">
+    {{#each data}}
+        <li class="list-item">
+            <a class="link-details" href="http://event.tujiaapp.com/custom-link.html?id={{id}}" target="_blank">
+                {{#if coverImage}}
+                <img class="tuwen-img" src="{{coverImage}}?imageView2/1/w/210/h/160" alt="{{caption}}"/>
+                {{/if}}
+                {{#unless coverImage}}
+                <img class="tuwen-img" src="http://service.tujiamedia.com/images/default.jpg?imageView2/1/w/210/h/160" alt="{{caption}}"/>
+                {{/unless}}
+                <section class="tuwen-details">
+                    <h2 class="tuwen-name line-clamp">{{caption}}</h2>
+                    <p class="tuwen-describer text-overflow-hidden">{{description}}</p>
+                    <p class="tuwen-stats">
+                        {{!-- <span class="tupian-number"><span> --}}
+                        <span class="tupian-viewCount">{{stats.viewCount}}</span>
+                    </p>
+                </section>
+            </a>
+        </li>
+    {{/each}}
+    </ul>
+
+    <footer class="footer">
+        <a class="create-altlas hide" href="http://download.tujiaapp.com"><i></i>创建你的图文故事</a>
+    </footer>
+
+{{#section 'jscodelink'}}
+    <script type="text/javascript">
+     var isInTujia = window.navigator.userAgent.toLowerCase().indexOf('tujia') > -1;
+     if(!isInTujia){
+        document.querySelector(".create-altlas").classList.remove('hide');
+     }
+    </script>
+{{/section}}
