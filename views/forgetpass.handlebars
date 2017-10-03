@@ -1,0 +1,35 @@
+{{#section 'head'}}
+    <link rel="stylesheet" type="text/css" href="css/forgetpass.css">
+{{/section}}
+
+   <div class="wrapper">
+        <header id="J_header" class="header">
+            <a class="J_back go-back"></a>
+            忘记密码
+        </header>
+
+        <ul class="nav-list">
+            <li class="nav-item"><a class="J_link link active">手机</a></li>
+            <li class="nav-item"><a class="J_link link">邮箱</a></li>
+        </ul>
+
+        <form method="post" action="/forgetpass" class="form" autocomplete="off">
+            <p class="input-form">
+                <i class="prefix">+86</i>
+                <input id="J_username" class="user-name" type="input" name="username" value="" required="required" autocomplete="off" placeholder="请输入手机号"/ >
+            </p>
+            <p class="input-form">
+                <input id="J_password" class="phone-code" type="input" name="code" value="" required="required" autocomplete="off" placeholder="请输入验证码"/>
+            </p>
+            <p class="input-form">
+                <input id="J_password" class="password" type="password" name="text" value="" required="required" autocomplete="off" placeholder="请输入6~14位字符的新密码"/>
+            </p>
+            <p>
+                <input id="J_login" class="login-submit" type="submit" name="submit" value="保存"/>
+            </p>
+        </form>
+   </div>
+
+{{#section 'jscodelink'}}
+    <script type="text/javascript" src="js/login.js"></script>
+{{/section}}
