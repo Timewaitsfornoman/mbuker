@@ -5,7 +5,8 @@ html, body, .wrapper {
     height: 100%;
     background-color: #f3f6fc;
 }
-.header{
+
+.header {
     position: relative;
     width: 100%;
     .fontSize(36);
@@ -17,7 +18,7 @@ html, body, .wrapper {
     background-color: #fff;
 }
 
-.go-back{
+.go-back {
     display: block;
     .pxtorem(width, 86);
     .pxtorem(height, 86);
@@ -56,11 +57,11 @@ html, body, .wrapper {
     .fontSize(32);
     color: #707070;
     .pxtorem(font-size, 32);
-     margin: 0 auto;
+    margin: 0 auto;
 }
 
-.active{
-   color: #fe644; 
+.active {
+    color: #fe644;
 }
 
 .active:after {
@@ -97,15 +98,15 @@ html, body, .wrapper {
     .pxtorem(text-indent, 20);
 }
 
-.input-form input:hover{
+.input-form input:hover {
     outline: 1px solid #ccc;
     outline-offset: 2px;
 }
 
-.prefix{
+.prefix {
     position: absolute;
     left: 0;
-    top:0;
+    top: 0;
     .fontSize(32);
     color: #4b4755;
     font-style: normal;
@@ -126,7 +127,7 @@ html, body, .wrapper {
     color: #ccc;
 }
 
-.login-submit{
+.login-submit {
     display: block;
     .fontSize(36);
     .pxtorem(width, 700);
@@ -137,8 +138,100 @@ html, body, .wrapper {
     margin-left: auto;
     margin-right: auto;
     color: #fff;
+    outline: none;
     text-align: center;
     border: 1px solid #fe644a;
     background-color: #fe644a;
     .pxtorem(border-radius, 40);
+}
+
+.phone-code {
+    .pxtorem(padding-right, 510);
+}
+
+.code-style {
+    position: absolute;
+    top: 0;
+    opacity: .4;
+    .fontSize(28);
+    color: #aeadad;
+    border: none;
+    outline: none;
+    display: block;
+    padding: 0;
+    text-align: right;
+    .pxtorem(right, 24);
+    .pxtorem(width, 160);
+    .pxtorem(height, 100);
+    .pxtorem(font-size, 28);
+    .pxtorem(line-height, 100);
+    background-color: #fff;
+}
+
+.code-style:hover {
+    color: #fe644a;
+    border: none;
+}
+
+.password{
+    .pxtorem(padding-right, 280);
+}
+
+.view-code{
+    position: absolute;
+    top: 0;
+    opacity: .4;
+    .fontSize(28);
+    color: #aeadad;
+    border: none;
+    outline: none;
+    display: block;
+    padding: 0;
+    .pxtorem(right, 24);
+    .pxtorem(width, 40);
+    .pxtorem(height, 100);
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-size: 0.768rem 0.32rem;
+    background-position: center center;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAPCAMAAAC7tZ1fAAAASFBMVEUAAACIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIjjUkwAAAAAGHRSTlMAmJGMEoMLCHpbOhxzZ2JIdEEubVIyJk3E7bvWAAAAqklEQVQoz33PWQ7DIAwEUA9mJxAgS+9/0yaoSiuSMl8WelhjUo7GMXkhBTc2FpEkIw2MVJgMnSrrf2ZniMNQAMD12cyAwnwMFt4BSd5JsBBes5BUEIk2hlhlRyJgA5HHQonPQtoBiJu5+voMcGnzBNLyOuOITev8WmObsVOLDtd2DesXgU841Qr3cIg/i2wFqtS2XQnTme+TmH6+dWFHHdJ275GhDg2T733ffJkFB25IYysAAAAASUVORK5CYII=);
+}
+
+.view-style:hover {
+    opacity: .6;
+}
+
+.email-code{
+    .pxtorem(padding-right, 500);
+}
+
+.image-code{
+    position: absolute;
+    top: 50%;
+    .pxtorem(right, 96);
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    background-color: #fff;
+    transform: translateY(-50%);
+}
+
+.img-style{
+    position: absolute;
+    top: 0;
+    opacity: .4;
+    .fontSize(28);
+    color: #aeadad;
+    border: none;
+    outline: none;
+    display: block;
+    padding: 0;
+    .pxtorem(right, 26);
+    .pxtorem(width, 32);
+    .pxtorem(height, 100);
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-size: 0.6186rem 0.7253rem;
+    background-position: center center;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB0AAAAiCAMAAACUYSJFAAAAS1BMVEUAAACIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIjZ97pJAAAAGXRSTlMAmDqPc1UHiYWSUScbES8LW3pibEhDNnRM/X8+4gAAAOhJREFUKM+lktlywyAMRSULgxGrWWz//5c2TRo3eOGhPQ/MMGeE7ghBBz/37DC1d2dtuLauCI0P9Lq5o3UJVRyMc3aJCrNtbNXT8hkH+dfKhOUQSIvwtlkbOGCnObxs1BZOuCk/rUcPF1idHlaqCJdUrQAKhaZEvFk1Aait7TfuJAaDDu7hFTqs3LNq6Fk0/7D+733F2LPcW7zerKQHUOXOVgIoJG9KFX8fN7nG59cuaK4DvbY0kj1LS/GnQSZzqqS890+4ySYQY5Kf263qvl6hKmrnG5hQ8OD9wEITh/Nk4kyINMdlf/QLy0cIqS/Li9wAAAAASUVORK5CYII=);
 }
