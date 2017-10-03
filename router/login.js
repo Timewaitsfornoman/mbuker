@@ -11,6 +11,12 @@ module.exports = {
             });
         });
 
+        app.get('/forgetpass', function(req, res, next) {
+            res.render('forgetpass', {
+                layout: 'mainmobile'
+            });
+        });
+
         app.get('/register', function(req, res, next) {
             res.render('register');
         });
