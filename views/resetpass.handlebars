@@ -1,0 +1,28 @@
+{{#section 'head'}}
+    <link rel="stylesheet" type="text/css" href="css/resetpass.css">
+{{/section}}
+
+   <div class="wrapper">
+        <header id="J_header" class="header">
+            <a class="J_back go-back"></a>
+            重置密码
+            <a class="J_resave reset-save" href="javascript:;">保存</a>
+        </header>
+
+        <form method="post" action="/forgetpass" class="J_form form" autocomplete="off">
+            <p class="input-form">
+                <i class="form-icon"></i>
+                <input id="J_password" class="pass-code" type="input" name="password" value="" required="required" autocomplete="off" placeholder="请输入旧密码"/>
+                <button id="J_sendcode" class="code-style" type="button" href=":;">忘记密码</button>
+            </p>
+            <p class="input-form">
+                <i class="form-icon"></i>
+                <input id="J_password" class="password" type="password" type="text" name="" value="" required="required" autocomplete="off" placeholder="请设置6~14位字符的新密码"/>
+                 <button id="J_showpass" class="view-code" type="button" href=":;"></button>
+            </p>
+        </form>
+   </div>
+
+{{#section 'jscodelink'}}
+    <script type="text/javascript" src="js/resetpass.js"></script>
+{{/section}}

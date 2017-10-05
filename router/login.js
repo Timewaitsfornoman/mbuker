@@ -17,6 +17,12 @@ module.exports = {
             });
         });
 
+        app.get('/resetpass', function(req, res, next) {
+            res.render('resetpass', {
+                layout: 'mainmobile'
+            });
+        });
+
         app.get('/home', function(req, res, next) {
             res.render('home', {
                 layout: 'mainmobile'
