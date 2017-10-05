@@ -1,0 +1,121 @@
+@import "../../unit/common/less/common.less";
+
+html, body, .wrapper {
+    width: 100%;
+    height: 100%;
+    background-color: #f3f6fc;
+}
+
+.header {
+    position: relative;
+    width: 100%;
+    .fontSize(36);
+    color: #333;
+    text-align: center;
+    .pxtorem(font-size, 36);
+    .pxtorem(height, 94);
+    .pxtorem(line-height, 94);
+    background-color: #fff;
+}
+
+.go-back {
+    display: block;
+    .pxtorem(width, 86);
+    .pxtorem(height, 94);
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAiCAMAAABodAmPAAAAM1BMVEUAAABLR1VLR1VLR1VLR1VLR1VLR1VLR1VLR1VLR1VLR1VLR1VLR1VLR1VLR1VLR1VLR1UTK2VPAAAAEXRSTlMAZl8HWyUMUkwYEx9YR0I6OftnQ6sAAABxSURBVCjPhdJHCsBACAXQ6PSScv/TBnET/QT/8sEwtsPn4by8XUTEzk4CTJ0kJbSGVtWWsS3Ew1hGm2rTGItlY0Otom1jiyQtfa38Wjd2MBggPA8+gpKw+KBNGAiOLhoyrgMXhyt22gPFA4tOUXNzXi+ZSANMqo/BHAAAAABJRU5ErkJggg==);
+}
+
+.item-lists {
+    list-style: none;
+    .pxtorem(margin-top, 30);
+    .pxtorem(padding-bottom, 87);
+}
+
+.item {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    border: none;
+    text-align: left;
+    .pxtorem(height, 100);
+    .pxtorem(line-height, 100);
+    .pxtorem(padding-left, 24);
+    background-color: #fff;
+}
+
+.bottom-line{
+    border-bottom: 1px solid #f1f1f1;
+}
+
+.bottom-line:before{
+    content: '';
+    position: absolute;
+    left: 0;
+    .pxtorem(bottom, -2);
+    .pxtorem(width, 24);
+    .pxtorem(height, 4);
+    background-color: #fff;
+}
+
+.item-name {
+    display: inline-block;
+    color: #333;
+    .fontSize(32);
+    text-align: left;
+    letter-spacing: 2px;
+    .pxtorem(height, 100);
+    .pxtorem(font-size, 32);
+    .pxtorem(line-height, 100);
+}
+
+.item-right{
+    position: absolute;
+    top: 0;
+    color: #888;
+    opacity: .8;
+    .fontSize(32);
+    .pxtorem(right, 32);
+    .pxtorem(height, 100);
+    .pxtorem(font-size, 32);
+    .pxtorem(line-height, 100);
+}
+
+.item-short {
+    position: absolute;
+    top: 50%;
+    opacity: .8;
+    .pxtorem(right, 32);
+    max-height: 100%;
+    .pxtorem(width, 17);
+    .pxtorem(height, 28);
+    transform: translateY(-50%);
+}
+
+.next-group {
+    .pxtorem(margin-top, 30);
+}
+
+.last-item{
+    padding: 0;
+}
+
+.login-out{
+    display: block;
+    color: #fe644a;
+    .fontSize(32);
+    text-align: center;
+    letter-spacing: 2px;
+    .pxtorem(line-height, 100);
+    .pxtorem(font-size, 32);
+    .pxtorem(height, 100);
+}
+
+a:active, a:hover, a:link, a:visited{
+    color: #fe644a;
+    text-decoration: none;
+}
