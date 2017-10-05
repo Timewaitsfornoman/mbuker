@@ -35,6 +35,12 @@ module.exports = {
             });
         });
 
+        app.get('/usersettings', function(req, res, next) {
+            res.render('usersettings', {
+                layout: 'mainmobile'
+            });
+        });
+
         app.get('/register', function(req, res, next) {
             res.render('register');
         });

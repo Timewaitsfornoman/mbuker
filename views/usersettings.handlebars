@@ -1,0 +1,28 @@
+{{#section 'head'}}
+<link rel="stylesheet" type="text/css" href="css/usersettings.css">
+{{/section}}
+<div class="wrapper">
+    <header id="J_header" class="header">
+        <a class="J_back go-back"></a> 
+        编辑
+        <a class="J_resave reset-save" href="javascript:;">保存</a>
+    </header>
+    <ul class="item-lists">
+        <li class="item">
+            <span class="item-name">头像</span>
+            <img class="item-short" src="images/user_avatar.png" alt="箭头" />
+        </li>
+        <li class="item next-group bottom-line">
+            <span class="item-name">昵称</span>
+            <input type="text" name="webname" value="" placeholder="最多16个中文,或32个字母"/>
+        </li>
+        <li class="item next-group text-sign">
+            <span class="item-name sign-text">签名</span>
+            <textarea class="text-area" id="J_sign" name="sign" placeholder="写点什么吧..."></textarea>
+            <p class="limit"><span class="item-right">0/64</span></p>
+        </li>
+    </ul>
+</div>
+{{#section 'jscodelink'}}
+<script type="text/javascript" src="js/usersettings.js"></script>
+{{/section}}
