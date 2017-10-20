@@ -1,6 +1,7 @@
-//@note 上线前的打包
-//@author LZC
-
+/**function 上线前的打包
+ * [less description]
+ * @type {[type]}
+ */
 var less = require('less');
 var fs = require('fs');
 var browserify = require('browserify');
