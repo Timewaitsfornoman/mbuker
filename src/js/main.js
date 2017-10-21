@@ -1,33 +1,42 @@
 var ajax = require('../../unit/common/js/getApi');
 var shareBox = require('../../unit/common/js/shareBox');
 var slider = require('../../unit/libs/lib-slider/2.0.0/slider');
-var backtop = require('../../unit/libs/lib-backtop/1.0.0/backtop.js');
-
 
 var page = 1;
 var loading = false;
+
+var banners = {
+    itemList: ['//static2.ivwen.com/users/4842968/bf00fa0f2e9a4823ac9f42c436ec0ccd.jpg-mobile',
+     'http://static2.ivwen.com/users/4842968/828daf6103044020b9c71c1e6ec00506.jpg-mobile',
+     'http://static2.ivwen.com/users/4842968/b0e11ce0142e482584df7cea294219cc.jpg-mobile',
+     'http://static2.ivwen.com/users/4842968/22788bb1031140ce937e2ba672045925.jpg-mobile',
+     'http://static2.ivwen.com/users/4842968/7dd19d6fc795441b8a72ee4bb92e53bf.jpg-mobile',
+     'http://static2.ivwen.com/users/4842968/48fd8b283bdb43aeb43798e7a9d358df.jpg-mobile',
+     'http://static2.ivwen.com/users/4842968/dc9963c6dc93471f9442291ce180867b.jpg-mobile'
+     ]
+};
 
 var index = {
 
     init: function() {
         this.sendApi.mainApi();
         this.addEvent();
+        this.readerBanner(banners);
         shareBox();
-        backtop();
     },
 
     readerBanner: function(data) {
 
         var itemList = data.itemList;
         var len = itemList.length;
-        var item = {};
+        var item = '';
         var banner = '<div id="J_slider-outer" class="slider-outer"><ul id="J_slider-wrap" class="slider-wrap">';
 
         for (var i = 0; i < len; i++) {
             item = itemList[i];
             banner += '<li>' +
-                '<a href="http://event.tujiaapp.com/custom-link.html?id=' + item.key + '" target="_blank">' +
-                '<img class="lazyimg" src="' + item.imagePath + '" alt="' + item.label + '"/>' +
+                '<a href="" target="_blank">' +
+                '<img class="lazyimg" src="' + item + '" alt="banner"/>' +
                 '</a>' +
                 '</li>';
         }
@@ -47,7 +56,7 @@ var index = {
             panel: '#J_slider-wrap',
             trigger: '#J_slider-status',
             fullScreen: true,
-            sizeRadio: 312 / 750,
+            sizeRadio: 463.5 / 750,
             play: true,
             loop: true
         });
@@ -82,6 +91,7 @@ var index = {
             });
         }
     },
+
     renderItem: function(index, data) {
 
         /*var itemlist = data.itemList;
@@ -186,7 +196,22 @@ var index = {
                     break;
             }
         });
+
+        var $win = $(window);
+
+        $(document).on('click', '.J_gotop', function() {
+            $win.scrollTop(0);
+        });
+
+        $(document).on('click', '.J_downbottom', function() {
+            var h = $(document).height() - $win.height();
+            $win.scrollTop(h);
+        });
+
+        $(document).on('click', '.J_refresh', function() {
+            window.location.href = window.location.href;
+        });
     }
-};
+}
 
 index.init();

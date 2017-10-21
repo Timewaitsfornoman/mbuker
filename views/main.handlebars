@@ -1,7 +1,5 @@
 {{#section 'head'}}
-<link rel="stylesheet" type="text/css" href="css/main.css"> 
-{{/section}}
-
+<link rel="stylesheet" type="text/css" href="css/main.css"> {{/section}}
 <header id="header" class="main-header">
     <p class="search">
         <input class="search-content" type="text" name="search" value="" placeHolder="大家都在搜" />
@@ -10,6 +8,7 @@
 </header>
 <!--  轮播图 -->
 <section id="J_slider" class="slider"></section>
+<!--  内容区 -->
 <section class="main-content">
     <ul id="J_navheader" class="header-nav">
         <li class="nav-current"><span class="J_item">推存</span></li>
@@ -18,19 +17,18 @@
         <li><span class="J_item">旅游</span></li>
         <li><span class="J_item">生活</span></li>
     </ul>
-    <img class="img-filter full-width" src="images/filter.jpg"/>
     <section id="J_content" class="main-list">
         <ul id="J-tuicun" class="list-items"></ul>
-        <ul id="J-yule" class="list-items hide"></ul>
-        <ul id="J-shishang" class="list-items hide"></ul>
-        <ul id="J-lvyou" class="list-items hide"></ul>
-        <ul id="J-shenghuo" class="list-items hide"></ul>
+        <ul id="J-yule" class="list-items hide"><img class="img-filter full-width" src="images/filter.jpg" /></ul>
+        <ul id="J-shishang" class="list-items hide"><img class="img-filter full-width" src="images/filter.jpg" /></ul>
+        <ul id="J-lvyou" class="list-items hide"><img class="img-filter full-width" src="images/filter.jpg" /></ul>
+        <ul id="J-shenghuo" class="list-items hide"><img class="img-filter full-width" src="images/filter.jpg" /></ul>
     </section>
-    <footer class="footer">
-        <img class="footer-img" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGkAAAA6CAMAAACERodRAAAAM1BMVEUAAAAzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzPKmszLAAAAEHRSTlMA7zB/vxBgIM/fn0CvcFCPR1tYmAAAArFJREFUWMPtVUkSozAMxJb3Df//tSMJJTHLAJepmoP7EELZUmtpieUR/SWe/EymyTQxMTExMTExMTHxH8PnrF9f1tkBouZlgPWPdm01fQO8iKiW2L9Q+udF9XpvmdTP0DwmIzGdLTK+uBtLu+7tnohUP8L/TsJdQqG/ZbJlXZbYT6jbKZ3oG+uPZSwABR/t73dT70sbKYIx4dta89Bks9GsmtM3NzzUBrWAcKxORIfR8T/o97XTrB631THetZPrBhSZSs0uH1RJRIsKLyEXexE7a2+JAF1ZYgqgx0jDtwn1wbwsr2AVSzgDog1dVl5q+OBIY6CQs39mgitZFqldo17bIawM+kJP47jfpqQvah/lkE699M8CvefjbTeOfN6fePlTesSI1tMoKrKQ2rlvJ3SUKTvDZzBqmFpdDAZoxLcOMnD2YkLKp3bJUsRqWxWqpsshzmmjSe63VZxWwly7wF3p1kvtjA1yh4i0RuoTj4syuWNHkuuEJn1Ua+zxqnYgWgmeidIm99bUmchTzsEd9BTq5wMC/LTuIqXC84XAJHLoQfUgIklYvqvFrAYf2fHOyWjMPfBUQr846oDg9InI+AxdAXemGc7Nk9CPRMGOlQcKtWJ4hRSgV+7VSsZ0fRy7wAqXLLA1Ea/4QESrZx3ByBSYaKxkI0EhUaOAazf4sEkqqdUQppPNLQV2aFBAKS3ydmo3m03EM4ybXwwLmkhND4B2Af2gVzL2O4VL1ytzJpn8iL8V4n4JcFWs5LMqEU+hcfedEKzmp8OHMrsJ4QP/+VuYmb2ni20jpwkAUuzimstCsuBh5CvyulOfJCIBF8sMxrP22ZE+Ls09DCeY0IPtnwWhWJryEfsBjjvDuizVSSa5i9kbENqoYdDjRwtM0YfxoLDfQwuVLIl/CetWYxI0/9bgDy/uQMrPebUdAAAAAElFTkSuQmCC" alt="末尾"/>
-    </footer>
 </section>
-
+<!--  尾部 -->
+<footer class="footer">
+    <img class="footer-img" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGkAAAA6CAMAAACERodRAAAAM1BMVEUAAAAzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzPKmszLAAAAEHRSTlMA7zB/vxBgIM/fn0CvcFCPR1tYmAAAArFJREFUWMPtVUkSozAMxJb3Df//tSMJJTHLAJepmoP7EELZUmtpieUR/SWe/EymyTQxMTExMTExMTHxH8PnrF9f1tkBouZlgPWPdm01fQO8iKiW2L9Q+udF9XpvmdTP0DwmIzGdLTK+uBtLu+7tnohUP8L/TsJdQqG/ZbJlXZbYT6jbKZ3oG+uPZSwABR/t73dT70sbKYIx4dta89Bks9GsmtM3NzzUBrWAcKxORIfR8T/o97XTrB631THetZPrBhSZSs0uH1RJRIsKLyEXexE7a2+JAF1ZYgqgx0jDtwn1wbwsr2AVSzgDog1dVl5q+OBIY6CQs39mgitZFqldo17bIawM+kJP47jfpqQvah/lkE699M8CvefjbTeOfN6fePlTesSI1tMoKrKQ2rlvJ3SUKTvDZzBqmFpdDAZoxLcOMnD2YkLKp3bJUsRqWxWqpsshzmmjSe63VZxWwly7wF3p1kvtjA1yh4i0RuoTj4syuWNHkuuEJn1Ua+zxqnYgWgmeidIm99bUmchTzsEd9BTq5wMC/LTuIqXC84XAJHLoQfUgIklYvqvFrAYf2fHOyWjMPfBUQr846oDg9InI+AxdAXemGc7Nk9CPRMGOlQcKtWJ4hRSgV+7VSsZ0fRy7wAqXLLA1Ea/4QESrZx3ByBSYaKxkI0EhUaOAazf4sEkqqdUQppPNLQV2aFBAKS3ydmo3m03EM4ybXwwLmkhND4B2Af2gVzL2O4VL1ytzJpn8iL8V4n4JcFWs5LMqEU+hcfedEKzmp8OHMrsJ4QP/+VuYmb2ni20jpwkAUuzimstCsuBh5CvyulOfJCIBF8sMxrP22ZE+Ls09DCeY0IPtnwWhWJryEfsBjjvDuizVSSa5i9kbENqoYdDjRwtM0YfxoLDfQwuVLIl/CetWYxI0/9bgDy/uQMrPebUdAAAAAElFTkSuQmCC" alt="末尾" />
+</footer>
 <div id="J_sharebox" class="image-share-popup-wrapper">
     <div id="J_sharecont" class="image-share-popup-content">
         <div class="image-share-popup-dom portrait">
@@ -64,10 +62,9 @@
     </div>
     <div id="J_shareMask" class="J_closeShare image-share-popup-mask"> </div>
 </div>
-
-<nav>
+<nav id="J_menu" class="nav">
     <ul>
-        <li class="up">
+        <li class="up J_gotop">
             <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="40px" height="40px" viewBox="0 0 40 40" enable-background="new 0 0 40 40" xml:space="preserve">
                 <g enable-background="new">
                     <g>
@@ -89,9 +86,8 @@
                 </g>
             </svg>
         </li>
-
         <!-- Because Lifes lame without a little bit of random in it! -->
-        <li class="random">
+        <li class="J_refresh random">
             <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="40px" height="40px" viewBox="0 0 40 40" enable-background="new 0 0 40 40" xml:space="preserve">
                 <g enable-background="new">
                     <g>
@@ -109,8 +105,7 @@
                 </g>
             </svg>
         </li>
-
-        <li class="down">
+        <li class="J_downbottom down">
             <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="40px" height="40px" viewBox="0 0 40 40" enable-background="new 0 0 40 40" xml:space="preserve">
                 <g enable-background="new">
                     <circle fill-rule="evenodd" clip-rule="evenodd" fill="#FFFFFF" cx="19.994" cy="20.001" r="20.004"></circle>
@@ -124,7 +119,6 @@
                 </g>
             </svg>
         </li>
-
         <li class="grid">
             <a href="/settings">
                 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="40px" height="40px" viewBox="0 0 40 40" enable-background="new 0 0 40 40" xml:space="preserve">
@@ -148,7 +142,6 @@
         </li>
     </ul>
 </nav>
-
 {{#section 'jscodelink'}}
 <script type="text/javascript" src="js/main.js"></script>
 {{/section}}
