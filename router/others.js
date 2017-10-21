@@ -5,6 +5,10 @@ var router = {
             res.render('address');
         });
 
+        app.get('/usercenter', function(req, res, next) {
+            res.render('usercenter');
+        });
+
         app.get('/twitem', function(req, res, next) {
             res.render('twitem', {
                 layout: 'mainmobile'
