@@ -5,8 +5,8 @@
 {{/section}}
     
    <!-- <section class="background-layout"></section> -->
-
-   {{#with pageOwner}}
+   {{#with data}}
+    {{#with pageOwner}}
     <header class="user-infor">
         {{#if avatar}}
         <img class="user-avatar" src="{{avatar}}" alt="{{name}}"/>
@@ -15,15 +15,15 @@
         <img class="user-avatar" src="http://event.tujiaapp.com/images/user-iconser.jpg" alt="{{name}}"/>
         {{/unless}}
         <section class="user-describe">
-            <h1 class="user-name text-overflow-hidden">{{name}}</h1>
+            <h1 class="user-name text-overflow-hidden">{{author}}</h1>
             <p class="user-count">
-                <span>关注{{followingCount}}</span>
+                <span>关注{{praise_count}}</span>
                 <span class="line">|</span>
-                <span>粉丝{{followerCount}}</span>
+                <span>粉丝{{visit_count}}</span>
                 <span class="line">|</span>
-                <span>图文{{../twcount}}</span>
+                <span>图文{{comment_count}}</span>
             </p>
-            <p class="signature line-clamp">{{signature}}</p>
+            <p class="signature line-clamp">{{description}}</p>
         </section>
     </header>
     {{/with}}
@@ -40,18 +40,19 @@
                 <img class="tuwen-img" src="http://service.tujiamedia.com/images/default.jpg?imageView2/1/w/210/h/160" alt="{{caption}}"/>
                 {{/unless}}
                 <section class="tuwen-details">
-                    <h2 class="tuwen-name line-clamp">{{caption}}</h2>
+                    <h2 class="tuwen-name line-clamp">{{category_name}}</h2>
                     <p class="tuwen-describer text-overflow-hidden">{{description}}</p>
                     <p class="tuwen-stats">
                         {{!-- <span class="tupian-number"><span> --}}
-                        <span class="tupian-viewCount">{{stats.viewCount}}</span>
+                        <span class="tupian-viewCount">{{visit_count}}</span>
                     </p>
                 </section>
             </a>
         </li>
     {{/each}}
     </ul>
-
+    {{/with}}
+    
     <footer class="footer">
         <a class="create-altlas hide" href="http://download.tujiaapp.com"><i></i>创建你的图文故事</a>
     </footer>

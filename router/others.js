@@ -1,3 +1,5 @@
+var usercenter = require('../data/usecenter.json');
+
 var router = {
 
     registergetRoutes: function(app) {
@@ -6,11 +8,14 @@ var router = {
         });
 
         app.get('/usercenter', function(req, res, next) {
-            res.render('usercenter');
+            res.render('usercenter', {
+                data: usercenter,
+                layout: 'mainmobile'
+            });
         });
 
-        app.get('/twitem', function(req, res, next) {
-            res.render('twitem', {
+        app.get('/detail', function(req, res, next) {
+            res.render('detail', {
                 layout: 'mainmobile'
             });
         });

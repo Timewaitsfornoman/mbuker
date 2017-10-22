@@ -6,7 +6,10 @@
     font-family: PingHei;
     src: url("http://www.apple.com/wss/fonts/PingHei/v1/PingHei-light.woff") format("woff"), url("http://www.apple.com/wss/fonts/PingHei/v1/PingHei-light.ttf") format("truetype");
 }
-;
+
+html,body{
+    height: 100%;
+}
 
 body {
     font-family: PingHei Tahoma, Helvetica, Arial, "\5b8b\4f53", sans-serif;
@@ -22,34 +25,39 @@ body {
     padding: 0;
     height: 100%;
     min-height: 100%;
-    width: pxtorem(750px);
+    .pxtorem(width,750);
     margin: 0 auto;
     background-color: #EFF0F7;
 }
 .user-infor {
     width: 100%;
-    height: pxtorem(230px);
+    .pxtorem(height,230);
+    .pxtorem(padding-top,26);
+    .pxtorem(padding-right,24);
+    .pxtorem(padding-bottom,38);
+    .pxtorem(padding-left,26);
+    clear: both;
+    z-index: 1;
     box-sizing: border-box;
     background-color: #FFF;
     border-bottom: 2px solid #F1F1F1;
-    padding: pxtorem(26px) pxtorem(24px) pxtorem(38px);
-    clear: both;
-    z-index: 1;
 }
 .user-avatar {
     float: left;
-    width: pxtorem(100px);
-    height: pxtorem(100px);
+    .pxtorem(width,100);
+    .pxtorem(height,100);
     border-radius: 100%;
     box-sizing: border-box;
     border: 1px solid #ccc;
 }
+
 .user-describe {
     float: right;
-    box-sizing: border-box;
-    width: pxtorem(582px);
+    .pxtorem(width,582);
     height: 100%;
-    padding-top: pxtorem(12px);
+    text-align: left;
+    box-sizing: border-box;
+    .pxtorem(padding-top,12);
 }
 .text-overflow-hidden {
     overflow: hidden;
@@ -59,98 +67,115 @@ body {
 }
 .user-name {
     color: #FE644A;
-    font-size: pxtorem(32px);
-    line-height: pxtorem(32px);
+    .pxtorem(font-size,32);
+    .pxtorem(line-height,32);
 }
 .user-count {
     text-align: left;
-    margin: pxtorem(14px) 0 pxtorem(20px);
+    .pxtorem(margin-top,14);
+    .pxtorem(margin-right,0);
+    .pxtorem(margin-bottom,20);
 
     span {
         color: #888;
         vertical-align: middle;
-        font-size: pxtorem(24px);
+        .pxtorem(font-size,24);
     }
 }
 .line-clamp {
     display: -webkit-box;
     -webkit-line-clamp: 2;
+    word-break: break-word;
     -webkit-box-orient: vertical;
     overflow: hidden;
 }
 .signature {
     color: #888;
-    font-size: pxtorem(20px);
-    line-height: pxtorem(26px);
+    .pxtorem(font-size,20);
+    .pxtorem(line-height,24);
 }
 .user-count span.line {
-    margin: 0 pxtorem(20px);
+    margin-top: 0;
+    margin-bottom: 0;
+    .pxtorem(margin-left,20);
+    .pxtorem(margin-right,20);
 }
 .wapper-tuwen {
     width: 100%;
     background-color: #FFF;
-    padding: pxtorem(10px) pxtorem(24px) 0;
     clear: both;
     z-index: 1;
     box-sizing: border-box;
+    padding-bottom: 0;
+    .pxtorem(padding-top,10);
+    .pxtorem(padding-right,24);
+    .pxtorem(padding-left,10);
 }
 .list-item {
-    height: pxtorem(162px);
-    padding: pxtorem(30px) 0;
+    .pxtorem(height,162);
+    padding-left: 0;
+    padding-right: 0; 
+    .pxtorem(padding-top,30);
+    .pxtorem(padding-bottom,30);
     border-bottom: 1px solid #F1F1F1;
 }
 .link-details {
     display: block;
-    width: pxtorem(702px);
-    height: pxtorem(160px);
+    .pxtorem(width,702);
+    .pxtorem(height,160);
     cursor: pointer;
-    border-radius: pxtorem(6px);
+    border-radius: 6px;
 }
 .tuwen-img {
     float: left;
-    width: pxtorem(206px);
-    height: pxtorem(160px);
-    border-radius: pxtorem(6px);
-    margin-right: pxtorem(30px);
+    .pxtorem(width,206);
+    .pxtorem(height,160);
+    .pxtorem(margin-right,30);
+    border-radius: 6px;
 }
 .tuwen-details {
     float: right;
-    width: pxtorem(466px);
-    height: pxtorem(160px);
+    text-align: left;
+    .pxtorem(width,466);
+    .pxtorem(height,160);
 }
+
+
 .tuwen-name {
     color: #333;
     font-weight: bold;
-    height: pxtorem(64px);
-    font-size: pxtorem(28px);
-    line-height: pxtorem(32px);
-    padding-top: pxtorem(6px);
+    .pxtorem(height,64);
+    .pxtorem(font-size,28);
+    .pxtorem(line-height,32);
+    .pxtorem(padding-top,6);
 }
 .tuwen-describer {
     color: #888;
-    height: pxtorem(24px);
-    line-height: pxtorem(22px);
-    font-size: pxtorem(20px);
-    margin: pxtorem(20px) 0 pxtorem(24px);
+    .pxtorem(height,24);
+    .pxtorem(font-size,20);
+    .pxtorem(line-height,22);
+    .pxtorem(margin-top,20);
+    .pxtorem(margin-bottom,24);
 }
 .tuwen-stats {
     color: #C4C4C4;
     text-align: left;
 }
 .tupian-viewCount {
-    font-size: pxtorem(20px);
-    line-height: pxtorem(20px);
-    padding-left: pxtorem(26px);
-    background-position: 0 pxtorem(4px);
+    .pxtorem(font-size,20);
+    .pxtorem(line-height,20);
+    .pxtorem(padding-left,26);
+    .pxtorem(background-position-x,0);
+    .pxtorem(background-position-y,4);
     background-repeat: no-repeat;
-    background-size: pxtorem(20px) pxtorem(14px);
+    background-size: 0.4266666666666667rem 0.2986666666666667rem;
     background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAOCAMAAAAYGszCAAAAOVBMVEUAAADExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTWET+wAAAAEnRSTlMAshDp0MNrUfTAqop1Wz81BVJqJW87AAAAZElEQVQY03WQSRYAERBDy1Tmod3/sC1ar5DNj4inoCnJQvWuBEv61ZLrSy61VfNYBuYAejkzPayqsFUNq5EK7BfKxmQq8ILIguaDJQM8pIGIPjoR0MfwePx00WWkffj7M/cPeQERcgqRG4XKVwAAAABJRU5ErkJggg==");
 }
 .footer {
     z-index: 1;
     clear: both;
-    margin-top: pxtorem(30px);
-    margin-bottom: pxtorem(60px);
+    .pxtorem(margin-top,30);
+    .pxtorem(margin-bottom,60);
 }
 a:link, a:visited {
     color: #FFF;
@@ -160,39 +185,27 @@ a {
 }
 .create-altlas {
     display: block;
-    width: pxtorem(555px);
-    height: pxtorem(89px);
-    line-height: pxtorem(32px);
+    .pxtorem(width, 555);
+    .pxtorem(height, 89);
+    .pxtorem(line-height, 32);
+    .pxtorem(font-size, 32);
+    .pxtorem(padding-top, 26);
+    .pxtorem(padding-right, 120);
+    .pxtorem(padding-bottom, 26);
+    .pxtorem(padding-left, 120);
     margin: 0 auto;
     text-align: left;
     border-radius: 6px;
     box-sizing: border-box;
     background-color: #fe644a;
-    font-size: pxtorem(32px);
-    padding: pxtorem(26px) pxtorem(120px);
-
     i {
         display: inline-block;
-        width: pxtorem(31px);
-        height: pxtorem(31px);
-        padding-right: pxtorem(6px);
+        .pxtorem(width,31);
+        .pxtorem(height,31);
+        .pxtorem(padding-right,6);
+        .pxtorem(background-position-y,2);
         background-repeat: no-repeat;
-        background-position: 0 pxtorem(2px);
-        background-size: pxtorem(31px) pxtorem(31px);
+        background-size: 0.6613333333333333rem 0.6613333333333333rem;
         background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB8AAAAfCAMAAAAocOYLAAAAZlBMVEUAAADx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHeREfYAAAAIXRSTlMA6yz68STkW04398R2QZVpHAoFzIuIgWFVR0Tc17poNRXuFE2EAAAAq0lEQVQoz7XTSQ7DIAxAUUMG0sxT06az73/JBuRWETiuusjfsHhGQiBgo2TQPBCnqBKREdNEYjvQ8qwXdl1blhV+ur0Etg0yRxeZsz/5uWYM+BCv2ezJD5kbn6sfnK+59LlTIvcwRwLr3ED2HZjAr7Y3bYiPAXexe4rTBltwL90sywhhBdryCkqsGdYL0sAMTDVSRUB0OpeaWtaN0/u5Z4xOp0bhq6mCtvK9AV+4JUBwSoXIAAAAAElFTkSuQmCC");
     }
 }
-
-// .background-layout {
-//  position: fixed;
-//  top: 0;
-//  left: 50%;
-//  bottom: 0;
-//  right: 0; 
-//  width: pxtorem(750px);
-//  height: 100%;
-//  z-index: -1;
-//  transform: translate(-50%, 0);
-//  min-height: 100%;
-//  background-color: #EFF0F7;
-// }

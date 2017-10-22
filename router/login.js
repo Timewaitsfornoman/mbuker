@@ -51,7 +51,7 @@ module.exports = {
             });
         });
 
-        app.get('/twitem', function(req, res, next) {
+        app.get('/detail', function(req, res, next) {
             res.render('twitem', {
                 layout: 'mainmobile'
             });
