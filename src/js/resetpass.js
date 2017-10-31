@@ -1,0 +1,1 @@
+var ajax = require('../../unit/common/js/common');

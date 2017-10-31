@@ -1,4 +1,5 @@
 var ajax = require('../../unit/common/js/getApi');
+var ajax = require('../../unit/common/js/common');
 
 var lock = false;
 var $J_back = $('#J_back');
