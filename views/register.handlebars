@@ -2,29 +2,47 @@
     <link rel="stylesheet" type="text/css" href="css/register.css">
 {{/section}}
 
-<div class="container">
-
-    <div class="register-wrapper">
-
-        <img class="logo" src="/images/logo.png"/>
-
-        <form action="user/login" class="form" autocomplete="off">
-            <h1 class="form-title">注册</h1>
-            <p><input id="J_username" type="input" name="username" required="required" autocomplete="off" placeholder="用户名"/ ></p>
-            <p><input id="J_password" type="password" name="password" required="required" autocomplete="off" placeholder="密码"/></p>
-            <p><input id="J_passwordonse" type="password" name="password" required="required" autocomplete="off" placeholder="再次输入密码"/></p>
+   <div class="wrapper">
+        <header id="J_header" class="header">
+            <a class="J_back go-back"></a>
+            注册
+        </header>
+        <form id="J_form" class="form" method="post" action="/register" autocomplete="off">
+            <p class="input-form">
+                <i class="prefix">+86</i>
+                <input id="J_username" class="user-name" type="input" name="username" value="" required="required" autocomplete="off" placeholder="请输入手机号"/ >
+            </p>
+            <p class="input-form">
+                <input id="J_password" class="phone-code" type="input" name="code" value="" required="required" autocomplete="off" placeholder="请输入验证码"/>
+                <button id="J_sendcode" class="code-style" type="button" href=":;">获取验证码</button>
+            </p>
+            <p class="input-form">
+                <input id="J_password" class="password" type="password" name="text" value="" required="required" autocomplete="off" placeholder="请输入6~14位字符的密码"/>
+                 <button id="J_showpass" class="view-code" type="button" href=":;"></button>
+            </p>
+             <p class="input-form">
+                <input id="J_password" class="password" type="password" name="text" value="" required="required" autocomplete="off" placeholder="请再次输入6~14位字符的密码"/>
+                 <button id="J_showpass" class="view-code" type="button" href=":;"></button>
+            </p>
             <p>
-            <input id="J_regist" type="submit" name="submit" value="注册"></p>
+                <input id="J_phone" class="login-submit" type="submit" name="submit" value="保存"/>
+            </p>
         </form>
 
-        <footer class="loginhelp">
-            <a href="/updatepassword">忘记密码？</a>
-            <a href="/">已有账号，去登录</a>
-        </footer>
-    </div>
-
-   <footer class="footer-copy">图加科技@2016-09-01</footer>
-</div>
+        <form method="post" action="/findbyemail" class="J_form form hide" autocomplete="off">
+            <p class="input-form">
+                <input id="J_email" class="email" type="input" name="email" value="" required="required" autocomplete="off" placeholder="请输入邮箱地址"/ >
+            </p>
+            <p class="input-form">
+                <input id="J_inputcode" class="email-code" type="input" name="code" value="" required="required" autocomplete="off" placeholder="请输入验证码"/>
+                <img id="J_img" class="image-code" src="images/code.jpg" alt="图形验证码"/>
+                <button id="J_freshcode" class="img-style" type="button" href=":;"></button>
+            </p>
+            <p>
+                <input id="J_email" class="login-submit" type="submit" name="submit" value="保存"/>
+            </p>
+        </form>
+   </div>
 
 {{#section 'jscodelink'}}
     <script type="text/javascript" src="js/register.js"></script>
