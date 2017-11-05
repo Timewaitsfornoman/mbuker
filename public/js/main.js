@@ -88,7 +88,7 @@ var index = {
         for (var i = 0; i < len; i++) {
             item = data[i];
             html += '<li class="tu-item">' +
-                '<a href="' + host + '?id=' + item.article_id + '" target="_blank">' +
+                '<a href="https://' + item.domain + '/' + item.article_id + '" target="_blank">' +
                 '<div class="waper-img" style="background-image: url(' + item.cover_img_url + '")>' +
                 '</div></a>' +
                 '<div>' +
